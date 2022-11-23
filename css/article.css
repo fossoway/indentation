@@ -1,11 +1,11 @@
-.header__title {
+.article__title {
   margin-bottom: 30px;
   font-weight: 900;
   font-size: 60px;
   line-height: 72px;
 }
 
-.header__paragraph:not(:last-child),
+.article__paragraph:not(:last-child),
 .main__paragraph:not(:last-child) {
   margin-bottom: 30px;
 }

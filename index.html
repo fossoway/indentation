@@ -5,39 +5,44 @@
   <title>Отступы в вёрстке</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;0,900;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;0,900;1,400&display=swap"
+        rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
-<body class="article">
-  <header class="header">
+<body>
+<article class="article">
+  <div class="container">
+    <h1 class="article__title">Отступы в вёрстке: margin и padding</h1>
 
-    <section class="container">
-      <h1 class="header__title">Отступы в вёрстке: margin и padding</h1>
-      <p class="header__paragraph">В этой статье я рассмотрю самые популярные "стандартные" решения для сохранения
+      <p class="article__paragraph">В этой статье я рассмотрю самые популярные "стандартные" решения для сохранения
         смысла и хорошей читаемости вашего кода. Если точнее — речь пойдет об основных правилах организации отступов.
         Они сильно влияют на общую функциональность кода и, если всё сделано верно, позволяют легко вносить изменения в
         любую его часть. При этом другие части кода продолжат нормально работать.</p>
-      <p class="header__paragraph">Как это часто бывает, знание базовых принципов поможет проявить гибкость и выйти за их пределы. Эти знания особенно важны для начинающих, но также будут полезным напоминанием и для более опытных верстальщиков. Итак, поговорим о фундаментальных основах работы с отступами в вёрстке.
+      <p class="article__paragraph">Как это часто бывает, знание базовых принципов поможет проявить гибкость и выйти за
+        их пределы. Эти знания особенно важны для начинающих, но также будут полезным напоминанием и для более опытных
+        верстальщиков. Итак, поговорим о фундаментальных основах работы с отступами в вёрстке.
       </p>
-    </section>
+  </div>
 
-    <section class="container container-grey">
-      <nav class="menu">
-        <h2 class="menu__title">Содержание:</h2>
-        <ol class="menu__list">
-          <li class="menu__item"><a class="menu__link" href="#margin-next">Отступ задается от предыдущего элемента к следующему</a></li>
-          <li class="menu__item"><a class="menu__link" href="#dom">Отступ задается последнему возможному элементу в DOM-дереве</a></li>
-          <li class="menu__item"><a class="menu__link" href="#margin-null">Для последнего элемента группы отступ обнуляется</a></li>
-        </ol>
-      </nav>
-    </section>
+  <div class="container container-grey">
+    <nav class="menu">
+      <h2 class="menu__title">Содержание:</h2>
+      <ol class="menu__list">
+        <li class="menu__item"><a class="menu__link" href="#margin-next">Отступ задается от предыдущего элемента к
+          следующему</a></li>
+        <li class="menu__item"><a class="menu__link" href="#dom">Отступ задается последнему возможному элементу в
+          DOM-дереве</a></li>
+        <li class="menu__item"><a class="menu__link" href="#margin-null">Для последнего элемента группы отступ
+          обнуляется</a></li>
+      </ol>
+    </nav>
+  </div>
 
-  </header>
+  <article class="main">
 
-  <main class="main">
-
-    <section class="container">
-      <h3 class="main__title" id="margin-next">Отступ задается от предыдущего элемента к следующему: от первого ко второму, сверху вниз, слева направо.
+    <div class="container">
+      <h3 class="main__title" id="margin-next">Отступ задается от предыдущего элемента к следующему: от первого ко
+        второму, сверху вниз, слева направо.
       </h3>
 
       <div class="main__wrapper">
@@ -48,25 +53,32 @@
              width="560">
 
         <ul class="main__list">
-          <li class="main__item"><strong>ВАЖНО:</strong> <i lang="en">margin</i> всегда задают от предыдущего элемента к следующему.
+          <li class="main__item"><strong>ВАЖНО:</strong> <i lang="en">margin</i> всегда задают от предыдущего элемента к
+            следующему.
           </li>
-          <li class="main__item">Свойство <i lang="en">margin</i> необходимо только для того, чтобы отодвинуть своего соседа справа или снизу,
+          <li class="main__item">Свойство <i lang="en">margin</i> необходимо только для того, чтобы отодвинуть своего
+            соседа справа или снизу,
             поэтому используется <i lang="en">margin-right</i> и <i lang="en">margin-bottom</i>.
           </li>
-          <li class="main__item">(!) Свойства <i lang="en">margin-left</i> и <i lang="en">margin-top</i> используются крайне редко.
+          <li class="main__item">(!) Свойства <i lang="en">margin-left</i> и <i lang="en">margin-top</i> используются
+            крайне редко.
           </li>
-          <li class="main__item">Для <i lang="en">padding</i> верно обратное. Исключением является его применения в декоративных целях, например, для увеличения области ссылки.
+          <li class="main__item">Для <i lang="en">padding</i> верно обратное. Исключением является его применения в
+            декоративных целях, например, для увеличения области ссылки.
           </li>
         </ul>
       </div>
 
       <div class="main__wrapper">
         <ul class="main__list">
-          <li class="main__item">Отступ внутри блока сверху или слева реализуется через <i lang="en">padding-top</i> и <i lang="en">padding-left</i> родителя.
+          <li class="main__item">Отступ внутри блока сверху или слева реализуется через <i lang="en">padding-top</i> и
+            <i lang="en">padding-left</i> родителя.
           </li>
-          <li class="main__item">Отступы, как правило, делают в направлении от предыдущего элемента к следующему. Так элемент не будет толкать сам себя.
+          <li class="main__item">Отступы, как правило, делают в направлении от предыдущего элемента к следующему. Так
+            элемент не будет толкать сам себя.
           </li>
-          <li class="main__item">Изначально элемент статичен, а его положение может меняться только под воздействием свойств других блоков или свойств родителя.
+          <li class="main__item">Изначально элемент статичен, а его положение может меняться только под воздействием
+            свойств других блоков или свойств родителя.
           </li>
         </ul>
 
@@ -76,12 +88,13 @@
              height="279"
              width="560">
       </div>
-    </section>
+    </div>
 
-    <section class="container">
+    <div class="container">
       <h3 class="main__title" id="dom">Отступ задается последнему возможному элементу в DOM-дереве</h3>
 
-      <p class="main__paragraph">Вообще, <span lang="en">margin</span> задают исключительно между соседними элементами DOM-дерева. Для примера, посмотрите на этот список:
+      <p class="main__paragraph">Вообще, <span lang="en">margin</span> задают исключительно между соседними элементами
+        DOM-дерева. Для примера, посмотрите на этот список:
       </p>
 
       <div class="container container-image-wrapper">
@@ -106,11 +119,14 @@
              width="1081"
              height="427">
         <figcaption class="main__figcaption">
-          <strong>ВАЖНО:</strong> здесь .<i lang="en">list-item</i> — последний возможный элемент в котором мы задаём отступ, чтобы разделить списки.
+          <strong>ВАЖНО:</strong> здесь .<i lang="en">list-item</i> — последний возможный элемент в котором мы задаём
+          отступ, чтобы разделить списки.
         </figcaption>
       </figure>
 
-      <p class="main__paragraph">Казалось бы, можно задать отступ параграфу &lt;<i lang="en">p</i>&gt;, либо обёртке &lt;<i lang="en">article</i>&gt; для достижения той же цели. Внешне останется все точно также, но так делать не рекомендуется.
+      <p class="main__paragraph">Казалось бы, можно задать отступ параграфу &lt;<i lang="en">p</i>&gt;, либо обёртке
+        &lt;<i lang="en">article</i>&gt; для достижения той же цели. Внешне останется все точно также, но так делать не
+        рекомендуется.
       </p>
       <p class="main__paragraph">Предыдущий пример был достаточно простым, но бывает вложенность значительно больше.
       </p>
@@ -125,7 +141,8 @@
 
       <p class="main__paragraph">В случае с заголовком, если ему необходим отступ сверху, последним элементом
         будет <i lang="en">section</i>. Именно для него задается <i lang="en">padding-top</i>, а
-        не <i lang="en">div</i> с классом <i lang="en">container</i>. Свойства <i lang="en">margin</i>, которые стоят по умолчанию необходимо обнулить.
+        не <i lang="en">div</i> с классом <i lang="en">container</i>. Свойства <i lang="en">margin</i>, которые стоят по
+        умолчанию необходимо обнулить.
       </p>
 
       <div class="container container-image-wrapper">
@@ -136,14 +153,17 @@
              height="504">
       </div>
 
-      <p class="main__paragraph">Это необходимо для более простого поиска отступов в будущем — для вас или того, кто будет верстать после вас. Кроме того, возможны серьёзные проблемы при динамическом дублировании или выводе вёрстки с нестандартной структурой отступов.
+      <p class="main__paragraph">Это необходимо для более простого поиска отступов в будущем — для вас или того, кто
+        будет верстать после вас. Кроме того, возможны серьёзные проблемы при динамическом дублировании или выводе
+        вёрстки с нестандартной структурой отступов.
       </p>
-    </section>
+    </div>
 
-    <section class="container">
+    <div class="container">
       <h3 class="main__title" id="margin-null">Для последнего элемента группы отступ всегда обнуляется</h3>
       <p class="main__paragraph">Для наглядности возьмём наш предыдущий пример с рецептами</p>
-      <p class="main__paragraph">Между рецептами расстояние одинаковое. Можно заметить, что и до следующего блока расстояние такое же.
+      <p class="main__paragraph">Между рецептами расстояние одинаковое. Можно заметить, что и до следующего блока
+        расстояние такое же.
       </p>
 
       <div class="container container-image-wrapper">
@@ -196,7 +216,8 @@
              width="806">
       </div>
 
-      <p class="main__paragraph">Здесь нас интересует отступ между пунктами меню и списком с кнопкой поиска. Отступы между пунктами меню задаются так:
+      <p class="main__paragraph">Здесь нас интересует отступ между пунктами меню и списком с кнопкой поиска. Отступы
+        между пунктами меню задаются так:
       </p>
 
       <div class="container container-image-wrapper">
@@ -207,7 +228,8 @@
              width="317">
       </div>
 
-      <p class="main__paragraph">Советую использовать псевдоклассы <span lang="en">:last-child</span> чаще других, например так:
+      <p class="main__paragraph">Советую использовать псевдоклассы <span lang="en">:last-child</span> чаще других,
+        например так:
       </p>
 
       <div class="container container-image=wrapper">
@@ -217,26 +239,30 @@
              height="383"
              width="500">
       </div>
-    </section>
-  </main>
-  <section class="container container-grey">
-    <footer class="footer">
-      <h2 class="footer__title">Подытожим:</h2>
-      <ul class="footer__list">
-        <li class="footer__item">отступы задаём от предыдущего элемента к следующему
-        </li>
-        <li class="footer__item">используем только <span lang="en">margin-right</span> и <span lang="en">margin-bottom</span>
-        </li>
-        <li class="footer__item">внешние отступы задаются только между соседями
-        </li>
-        <li class="footer__item">внутренний отступ задаём самому верхнему элементу в дом дереве
-        </li>
-        <li class="footer__item">последнему элементу группы отступ всегда обнуляем</li>
-      </ul>
+    </div>
+    <div class="container container-grey">
+      <section class="footer">
+        <h2 class="footer__title">Подытожим:</h2>
+        <ul class="footer__list">
+          <li class="footer__item">отступы задаём от предыдущего элемента к следующему
+          </li>
+          <li class="footer__item">используем только <span lang="en">margin-right</span> и <span
+            lang="en">margin-bottom</span>
+          </li>
+          <li class="footer__item">внешние отступы задаются только между соседями
+          </li>
+          <li class="footer__item">внутренний отступ задаём самому верхнему элементу в дом дереве
+          </li>
+          <li class="footer__item">последнему элементу группы отступ всегда обнуляем</li>
+        </ul>
 
-      <p class="footer__paragraph">Конечно бывают исключения. Ведь макеты бывают различной сложности. Иногда базовые принципы приходится нарушать в угоду дизайнерского решения или простоты вёрстки. Но для этого эти принципы необходимо хорошо знать.
-      </p>
-    </footer>
-  </section>
+        <p class="footer__paragraph">Конечно бывают исключения. Ведь макеты бывают различной сложности. Иногда базовые
+          принципы приходится нарушать в угоду дизайнерского решения или простоты вёрстки. Но для этого эти принципы
+          необходимо хорошо знать.
+        </p>
+      </section>
+    </div>
+  </article>
+</article>
 </body>
 </html>
