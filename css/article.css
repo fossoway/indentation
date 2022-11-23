@@ -86,6 +86,10 @@
   color: #02535F;
 }
 
+.footer__item:not(:last-child) {
+  margin-bottom: 10px;
+}
+
 .footer__list {
   margin-bottom: 30px;
   list-style-type: "\2014\00A0";
