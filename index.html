@@ -84,7 +84,7 @@
       <p class="main__paragraph">Вообще, <span lang="en">margin</span> задают исключительно между соседними элементами DOM-дерева. Для примера, посмотрите на этот список:
       </p>
 
-      <div class="image__wrapper">
+      <div class="container container-image-wrapper">
         <img class="main__image"
              src="image/dom.png"
              alt="Список элементов, внутри первого элемента спика находится блок article с заголовком h3 и параграфом"
@@ -115,7 +115,7 @@
       <p class="main__paragraph">Предыдущий пример был достаточно простым, но бывает вложенность значительно больше.
       </p>
 
-      <div class="image__wrapper">
+      <div class="container container-image-wrapper">
         <img class="main__image"
              src="image/title-padding.png"
              alt="Блок из div с классом container и вложенного в него заголовка h2"
@@ -128,7 +128,7 @@
         не <i lang="en">div</i> с классом <i lang="en">container</i>. Свойства <i lang="en">margin</i>, которые стоят по умолчанию необходимо обнулить.
       </p>
 
-      <div class="image__wrapper">
+      <div class="container container-image-wrapper">
         <img class="main__image"
              src="image/title-padding-example.png"
              alt="В секции отступ заголовка сверху выполнен с помощью padding у родителя"
@@ -146,7 +146,7 @@
       <p class="main__paragraph">Между рецептами расстояние одинаковое. Можно заметить, что и до следующего блока расстояние такое же.
       </p>
 
-      <div class="image__wrapper">
+      <div class="container container-image-wrapper">
         <img class="main__image"
              src="image/last-child-margin.png"
              alt="В списке у последнего элемента нет внешнего отступа, а у заголовка следующей секции задан внутренний отступ сверху"
@@ -160,7 +160,7 @@
         задаю секциям <i lang="en">padding-top:50px</i> и <i lang="en">padding-bottom:50px</i>.
       </p>
 
-      <div class="image__wrapper">
+      <div class="container container-image-wrapper">
         <img class="main__image"
              src="image/last-child-margin-example.png"
              alt="В списке внешний отступ есть у всех элементов, кроме последнего"
@@ -182,7 +182,7 @@
       <p class="main__paragraph">Для большего понимания рассмотрим другой пример, который часто встречается на практике:
       </p>
 
-      <div class="image__wrapper">
+      <div class="container container-image-wrapper">
         <img class="main__image"
              src="image/menu.png"
              alt="Горизонтальное меню"
@@ -199,7 +199,7 @@
       <p class="main__paragraph">Здесь нас интересует отступ между пунктами меню и списком с кнопкой поиска. Отступы между пунктами меню задаются так:
       </p>
 
-      <div class="image__wrapper">
+      <div class="container container-image-wrapper">
         <img class="main__image"
              src="image/menu-code-margin.png"
              alt="Отступ между пунктами меню задан через margin-right: 60px"
@@ -210,7 +210,7 @@
       <p class="main__paragraph">Советую использовать псевдоклассы <span lang="en">:last-child</span> чаще других, например так:
       </p>
 
-      <div class="image__wrapper">
+      <div class="container container-image=wrapper">
         <img class="main__image"
              src="image/menu-last-child.png"
              alt="Задаем отступ у элементов с помощью класса и через :last-child убираем отступ у последнего элемента. Второй вариант: через комнбинацию псеводклассов :not(:last-child) задаем отступ для всех элементов, кроме последнего"
